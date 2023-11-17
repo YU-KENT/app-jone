@@ -1,0 +1,15 @@
+.vertical-content {
+    width: 144px;
+    border: 1px solid #89c2f7;
+}
+
+.vertical-logo {
+    display: flex;
+    justify-content: center;
+}
+
+.icon-setting-vertical {
+    font-size: 50px;
+    margin: 20px 0;
+    animation: rotate 2s linear infinite;
+}
