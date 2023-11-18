@@ -4,9 +4,12 @@ import './index.css';
 import Home from'./components/Home';
 import Login from'./components/Login';
 import { BrowserRouter as Router, Route,Routes } from 'react-router-dom';
-import { Provider } from 'react-redux'
-import {store} from'./outils/store'
-
+import { Provider } from 'react-redux';
+import {store} from'./outils/store';
+import GestionDemande from'./components/GestionDemande';
+import GestionProjets from'./components/GestionProjets';
+import GestionTests from'./components/GestionTests';
+import Raports from './components/Raports';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -14,14 +17,15 @@ root.render(
   <React.StrictMode>
     <Router>
       <Routes>
-          <Route path='/' element ={<Login/>}/>
+          <Route path='/' exact element ={<Login/>}/>
           <Route path='/home/user/:userId'  element={<Home/>} />
+          <Route path='/demande/user/:userId' element={<GestionDemande/>}  />
+          <Route path='/projects/user/:userId/list' element={<GestionProjets/>}  />
+          <Route path='/tests/user/:userId/overview' element={<GestionTests/>}  />
+          <Route path='/raports/user/:userId/developResourceList' element={<Raports/>}  />
       </Routes>
     </Router>
   </React.StrictMode>
   </Provider>
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals

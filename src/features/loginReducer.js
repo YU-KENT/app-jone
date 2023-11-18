@@ -3,12 +3,12 @@ import { createSlice} from '@reduxjs/toolkit'
 const{actions, reducer} = createSlice({
 name:'login',
 initialState :{
-     
-      Selected : false,
+
       ErrorMsg :'',
       UserEmail:'',
       id:'12',
       PassWord:'',
+      UserName:'',
       ValideEmail: false,
       VaidePassword: false,
       accessToken:undefined,
@@ -51,6 +51,16 @@ reducers :{
       return{...state,id:action.payload.value, }
     }},
 
+  setUserName :{
+      prepare:(value)=>({
+        payload:{value}
+      }),  
+      reducer:(state,action)=>{
+      console.log("action.payload.value",action.payload.value)
+      return{...state,UserName:action.payload.value, }
+
+    }},
+
   setAccessToken :{
       prepare:(value)=>({
         payload:{value}
@@ -80,5 +90,5 @@ reducers :{
   }
 
 })
-export const {UserEmail,PassWord,setErrorMsg,setUserId,setAccessToken,clear} = actions
+export const {UserEmail,PassWord,setErrorMsg,setUserName,setUserId,setAccessToken,clear} = actions
 export default reducer

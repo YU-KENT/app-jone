@@ -8,6 +8,7 @@ import { FaGoogle } from "react-icons/fa";
 import { FaTwitter } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
 import * as logninActions from '../features/loginReducer'
+import FetchUser from '../outils/fetch';
 
 /* import { RequestLogin,RequestGetProfile } from '../outils/request' */
 import '../style/Login.css'
@@ -17,13 +18,30 @@ function Login(){
     const dispatch = useDispatch() 
     const navigate = useNavigate()
     const state = useSelector(loginState)
-    const{UserEmail,PassWord,ValideEmail,VaidePassword,ErrorMsg,id} = state
+    const{UserEmail,PassWord,ValideEmail,VaidePassword,ErrorMsg,id,UserName} = state
 
     const handleSubmit = async (e)=>{
         e.preventDefault();
-        console.log("state",state)
+
+        
         if (VaidePassword && ValideEmail ){
-          let userId = id;
+            const fetchUserData = async () => {
+                try {
+                  const response = await fetch('/data/user.json');
+                  const data = await response.json();
+                  const userData = data.user
+                  console.log("userData",userData)
+                  dispatch(logninActions.setUserName(userData.UserName));
+                 
+                } catch (error) {
+                  console.error('Error fetching user data:', error);
+                }
+              };
+              
+              fetchUserData()
+            
+
+        let userId = id;
          navigate(`/home/user/${userId}`)
          
       } else{
@@ -64,10 +82,10 @@ function Login(){
 
                         <p className='Error_Messages'>{ErrorMsg}</p>
                     </form>
-                    <div class="go-registered">
+                    <div className="go-registered">
                         
                         <p>
-                            <span class="no-account">Vous n'avez pas encore de compte ?</span>
+                            <span className="no-account">Vous n'avez pas encore de compte ?</span>
                             &nbsp;&nbsp;&nbsp;
                             <a href="/">Créer mon compte &gt;</a>
                         </p>
