@@ -1,0 +1,91 @@
+.header-app {
+    width: 1296px;
+    height: 56px;
+}
+
+.main-app {
+    display: flex;
+}
+
+.header-app-title {
+    font-weight: 500;
+    font-size: 19px;
+    margin-left: 27px;
+}
+
+.app-content {
+    display: flex;
+    flex-direction: column;
+    /*  background-color: #bebcbc; */
+}
+
+.app-table {
+    background-color: #eee;
+}
+
+.app-table-header {
+    height: 34px;
+    position: relative;
+}
+
+.TableDeTravail {
+    margin: 20px 15px;
+    background-color: #ffff;
+}
+
+.app-table-title {
+    position: absolute;
+    left: 1%;
+    top: 50%;
+    font-size: 16px;
+    font-weight: 600;
+    color: #798596;
+}
+
+
+.app-table-project {
+    position: absolute;
+    right: 15%;
+    top: 50%;
+    font-size: 16px;
+    font-weight: 600;
+    color: #798596;
+}
+
+.projectName {
+    position: absolute;
+    right: 4%;
+    top: 50%;
+    font-size: 16px;
+    color: #0080ff;
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropbtn {
+    cursor: pointer;
+    position: relative;
+}
+
+.icon-dropdown {
+    position: absolute;
+    top: 15%;
+    right: -39%;
+
+}
+
+.dropdown-content {
+    position: absolute;
+    left: -137%;
+    top: 113%;
+    width: 240px;
+    height: 262px;
+    background-color: #ffff;
+    border-radius: 10px;
+    box-shadow: 0 2px 20px rgba(0, 0, 0, .1);
+    display: flex;
+    flex-direction: column;
+
+}

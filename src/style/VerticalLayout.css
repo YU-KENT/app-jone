@@ -1,7 +1,7 @@
 .vertical-content {
     width: 144px;
     border-right: 2px solid #eeeff0;
-    box-shadow: -8px 8px 8px rgba(0, 21, 41, .08);
+    /*     box-shadow: -8px 8px 8px rgba(0, 21, 41, .08); */
 }
 
 .vertical-logo {
@@ -62,7 +62,7 @@
 }
 
 .active {
-    background-color: #1837ff;
+    background-color: #0051ff;
 
 }
 

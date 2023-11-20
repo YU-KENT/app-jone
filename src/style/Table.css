@@ -6,23 +6,30 @@
 
 /* Style for the header */
 .table-header {
+    height: 54px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 10px;
 }
 
-/* Style for the navigation buttons */
-.table-button {
-    padding: 5px 10px;
-    cursor: pointer;
+.titleElements {
+    margin-left: 15px;
 }
+
+.table-header button {
+
+    cursor: pointer;
+    border: none;
+    background-color: #ffff;
+}
+
 
 /* Style for the content */
 .table-content {
     border: 1px solid #ccc;
     border-radius: 5px;
-    padding: 10px;
+    padding: 15px;
+    height: 180px;
 }
 
 /* Style for the header row */
@@ -37,29 +44,33 @@
 /* Style for each row */
 .table-row {
     display: flex;
-    justify-content: space-between;
+
     border-bottom: 1px solid #ddd;
     padding: 8px 0;
 }
 
 /* Style for each column */
 .table-column {
-    flex: 1;
+
     text-align: center;
+    margin-right: 20px;
 }
 
-/* Style for the navigation buttons */
-.table-button {
-    padding: 5px 10px;
+
+.currentPage-color {
+    color: #0080ff;
+}
+
+.titleElement {
     cursor: pointer;
-    background-color: #4caf50;
-    color: white;
-    border: none;
-    border-radius: 5px;
+    font-weight: 500;
+    margin-right: 40px;
+    padding: 15px 0;
 }
 
-/* Disable navigation buttons when not applicable */
-.table-button:disabled {
-    background-color: #d3d3d3;
-    cursor: not-allowed;
+.titleElement.active {
+    color: #1890ff !important;
+    background-color: #ffff;
+    border-bottom: 2px solid #1890ff;
+
 }

@@ -5,5 +5,137 @@
         "id": "12",
         "PassWord": "",
         "accessToken": null
+    },
+    "projects": {
+        "exampleProject": {
+            "Tâches inacceptés": [
+                {
+                    "colA": "A1",
+                    "colB": "B1",
+                    "colC": "C1"
+                },
+                {
+                    "colA": "A2",
+                    "colB": "B2",
+                    "colC": "C2"
+                },
+                {
+                    "colA": "A3",
+                    "colB": "B3",
+                    "colC": "C3"
+                },
+                {
+                    "colA": "A4",
+                    "colB": "B4",
+                    "colC": "C4"
+                },
+                {
+                    "colA": "A4",
+                    "colB": "B4",
+                    "colC": "C4"
+                },
+                {
+                    "colA": "A4",
+                    "colB": "B4",
+                    "colC": "C4"
+                },
+                {
+                    "colA": "A4",
+                    "colB": "B4",
+                    "colC": "C4"
+                },
+                {
+                    "colA": "A4",
+                    "colB": "B4",
+                    "colC": "C4"
+                }
+            ],
+            "Tâches inaccomplis": [
+                {
+                    "colA": "A1&&",
+                    "colB": "B1&&",
+                    "colC": "C1&&"
+                },
+                {
+                    "colA": "A2&&",
+                    "colB": "B2&&",
+                    "colC": "C2&&"
+                },
+                {
+                    "colA": "A3&&",
+                    "colB": "B3&&",
+                    "colC": "C3&&"
+                },
+                {
+                    "colA": "A4",
+                    "colB": "B4",
+                    "colC": "C4"
+                },
+                {
+                    "colA": "A4",
+                    "colB": "B4",
+                    "colC": "C4"
+                },
+                {
+                    "colA": "A4",
+                    "colB": "B4",
+                    "colC": "C4"
+                },
+                {
+                    "colA": "A4",
+                    "colB": "B4",
+                    "colC": "C4"
+                },
+                {
+                    "colA": "A4",
+                    "colB": "B4",
+                    "colC": "C4"
+                }
+            ],
+            "Tâches à lancer": [
+                {
+                    "colA": "A1",
+                    "colB": "B1",
+                    "colC": "C1"
+                },
+                {
+                    "colA": "A2",
+                    "colB": "B2",
+                    "colC": "C2"
+                },
+                {
+                    "colA": "A3",
+                    "colB": "B3",
+                    "colC": "C3"
+                },
+                {
+                    "colA": "A4",
+                    "colB": "B4",
+                    "colC": "C4"
+                },
+                {
+                    "colA": "A4",
+                    "colB": "B4",
+                    "colC": "C4"
+                },
+                {
+                    "colA": "A4",
+                    "colB": "B4",
+                    "colC": "C4"
+                },
+                {
+                    "colA": "A4",
+                    "colB": "B4",
+                    "colC": "C4"
+                },
+                {
+                    "colA": "A4",
+                    "colB": "B4",
+                    "colC": "C4"
+                }
+            ]
+        },
+        "project2": {},
+        "project3": {}
     }
 }

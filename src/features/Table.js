@@ -1,20 +1,16 @@
 import React, { useState } from 'react';
 import '../style/Table.css';
+import { IoIosArrowBack } from "react-icons/io";
+import { IoIosArrowForward } from "react-icons/io";
 
-const data = [
-  { colA: 'A1', colB: 'B1', colC: 'C1' },
-  { colA: 'A2', colB: 'B2', colC: 'C2' },
-  { colA: 'A3', colB: 'B3', colC: 'C3' },
-  { colA: 'A4', colB: 'B4', colC: 'C4' },
-  // Add more data as needed
-];
+const itemsPerPage = 5;
 
-const itemsPerPage = 4;
-
-const ThreeColumnComponent = () => {
+function ThreeColumnComponent({className,data})  {
+  console.log("data",data)
   const [currentPage, setCurrentPage] = useState(1);
-  const totalPages = Math.ceil(data.length / itemsPerPage);
-
+  const [activeKey, setActiveKey] = useState('Tâches inacceptés');
+  const totalPages = Math.ceil(data[activeKey].length / itemsPerPage);
+  console.log("totalPages",totalPages)
   const handlePrevPage = () => {
     setCurrentPage((prevPage) => Math.max(prevPage - 1, 1));
   };
@@ -22,11 +18,29 @@ const ThreeColumnComponent = () => {
   const handleNextPage = () => {
     setCurrentPage((prevPage) => Math.min(prevPage + 1, totalPages));
   };
-
-  const renderDataForCurrentPage = () => {
+  const getPropertyKeys = (obj)=> {
+    return Object.keys(obj);
+  }
+  const propertyKeysArray = getPropertyKeys(data);
+  console.log("propertyKeysArray",propertyKeysArray)
+  const keyElements = propertyKeysArray.map((key) => (
+    <span key={key} className={`titleElement ${activeKey === key?'active':''}`}
+    onClick={() => handleKeyClick(key)}
+    >
+      {key}
+    </span>
+  ));
+  const handleKeyClick = (key) => {
+    setActiveKey(key);
+    // when a key is clicked if needed
+  };
+  console.log("key",activeKey)
+  const renderDataForCurrentPage = (key) => {
     const startIndex = (currentPage - 1) * itemsPerPage;
     const endIndex = startIndex + itemsPerPage;
-    const pageData = data.slice(startIndex, endIndex);
+    const currectData = data[key];
+    console.log("currectData",currectData)
+    const pageData = currectData.slice(startIndex, endIndex);
 
     return pageData.map((item, index) => (
       <div key={index} className="table-row">
@@ -38,25 +52,23 @@ const ThreeColumnComponent = () => {
   };
 
   return (
-    <div>
+    <div className={className}>
       <div className="table-header">
-        <button onClick={handlePrevPage} disabled={currentPage === 1}>
-          Prev
-        </button>
-        <span>
-          {currentPage} / {totalPages}
-        </span>
-        <button onClick={handleNextPage} disabled={currentPage === totalPages}>
-          Next
-        </button>
+        <div className='titleElements'>{keyElements}</div>
+        <div>
+          <button onClick={handlePrevPage} disabled={currentPage === 1}>
+            <IoIosArrowBack />
+          </button>
+          <span>
+            <span className='currentPage-color'>{currentPage}</span> / {totalPages}
+          </span>
+          <button onClick={handleNextPage} disabled={currentPage === totalPages}>
+            <IoIosArrowForward/>
+          </button>
+        </div>
       </div>
       <div className="table-content">
-        <div className="table-row table-header">
-          <div className="table-column">A</div>
-          <div className="table-column">B</div>
-          <div className="table-column">C</div>
-        </div>
-        {renderDataForCurrentPage()}
+        {renderDataForCurrentPage(activeKey)}
       </div>
     </div>
   );
