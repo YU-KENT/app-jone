@@ -1,141 +1,58 @@
 {
     "user": {
         "UserName": "Robin",
-        "UserEmail": "",
+        "UserEmail": "yukent848@gmail.com",
         "id": "12",
-        "PassWord": "",
+        "PassWord": "12",
         "accessToken": null
     },
     "projects": {
         "exampleProject": {
             "Tâches inacceptés": [
                 {
-                    "colA": "A1",
-                    "colB": "B1",
-                    "colC": "C1"
+                    "priorité": "P0",
+                    "numéro": "défaut 5",
+                    "type": "défaut",
+                    "déscription": "panier n'affiche pas entièrement en mobile",
+                    "responsable": "A réclamer",
+                    "Estimation temps": "0h",
+                    "status": "Nouveau",
+                    "acceptable": true
                 },
                 {
-                    "colA": "A2",
-                    "colB": "B2",
-                    "colC": "C2"
-                },
-                {
-                    "colA": "A3",
-                    "colB": "B3",
-                    "colC": "C3"
-                },
-                {
-                    "colA": "A4",
-                    "colB": "B4",
-                    "colC": "C4"
-                },
-                {
-                    "colA": "A4",
-                    "colB": "B4",
-                    "colC": "C4"
-                },
-                {
-                    "colA": "A4",
-                    "colB": "B4",
-                    "colC": "C4"
-                },
-                {
-                    "colA": "A4",
-                    "colB": "B4",
-                    "colC": "C4"
-                },
-                {
-                    "colA": "A4",
-                    "colB": "B4",
-                    "colC": "C4"
+                    "priorité": "P0",
+                    "numéro": "défaut 6",
+                    "type": "défaut",
+                    "déscription": "code promo ne fonctionne pas",
+                    "responsable": "A réclamer",
+                    "Estimation temps": "0h",
+                    "status": "Nouveau",
+                    "acceptable": true
                 }
             ],
             "Tâches inaccomplis": [
                 {
-                    "colA": "A1&&",
-                    "colB": "B1&&",
-                    "colC": "C1&&"
-                },
-                {
-                    "colA": "A2&&",
-                    "colB": "B2&&",
-                    "colC": "C2&&"
-                },
-                {
-                    "colA": "A3&&",
-                    "colB": "B3&&",
-                    "colC": "C3&&"
-                },
-                {
-                    "colA": "A4",
-                    "colB": "B4",
-                    "colC": "C4"
-                },
-                {
-                    "colA": "A4",
-                    "colB": "B4",
-                    "colC": "C4"
-                },
-                {
-                    "colA": "A4",
-                    "colB": "B4",
-                    "colC": "C4"
-                },
-                {
-                    "colA": "A4",
-                    "colB": "B4",
-                    "colC": "C4"
-                },
-                {
-                    "colA": "A4",
-                    "colB": "B4",
-                    "colC": "C4"
+                    "priorité": "P0",
+                    "numéro": "défaut 4",
+                    "type": "défaut",
+                    "déscription": "pouvez pas afficher l'image du produit en grand",
+                    "responsable": "A réclamer",
+                    "Estimation temps": "0h",
+                    "status": "Nouveau",
+                    "acceptable": false
                 }
             ],
-            "Tâches à lancer": [
-                {
-                    "colA": "A1",
-                    "colB": "B1",
-                    "colC": "C1"
-                },
-                {
-                    "colA": "A2",
-                    "colB": "B2",
-                    "colC": "C2"
-                },
-                {
-                    "colA": "A3",
-                    "colB": "B3",
-                    "colC": "C3"
-                },
-                {
-                    "colA": "A4",
-                    "colB": "B4",
-                    "colC": "C4"
-                },
-                {
-                    "colA": "A4",
-                    "colB": "B4",
-                    "colC": "C4"
-                },
-                {
-                    "colA": "A4",
-                    "colB": "B4",
-                    "colC": "C4"
-                },
-                {
-                    "colA": "A4",
-                    "colB": "B4",
-                    "colC": "C4"
-                },
-                {
-                    "colA": "A4",
-                    "colB": "B4",
-                    "colC": "C4"
-                }
-            ]
+            "Tâches à commencer": ""
         },
-        "project2": {},
-        "project3": {}
+        "project 2": {
+            "Tâches inacceptés": "",
+            "Tâches inaccomplis": "",
+            "Tâches à lancer": ""
+        },
+        "project 3": {
+            "Tâches inacceptés": "",
+            "Tâches inaccomplis": "",
+            "Tâches à lancer": ""
+        }
     }
 }

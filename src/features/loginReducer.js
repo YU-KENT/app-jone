@@ -6,7 +6,7 @@ initialState :{
 
       ErrorMsg :'',
       UserEmail:'',
-      id:'12',
+      id:'',
       PassWord:'',
       UserName:'',
       ValideEmail: false,
@@ -15,6 +15,7 @@ initialState :{
       
 },
 reducers :{
+
   UserEmail: {
       prepare:(value)=>({
         payload:{value}
@@ -87,8 +88,11 @@ reducers :{
         accessToken:undefined,
       }}
 
-  }
+  },
 
 })
+
+
+
 export const {UserEmail,PassWord,setErrorMsg,setUserName,setUserId,setAccessToken,clear} = actions
 export default reducer

@@ -2,7 +2,7 @@ import { IoSettingsOutline } from "react-icons/io5";
 import { NavLink } from "react-router-dom";
 import'../style/VerticalLayout.css'
 import {loginState} from '../outils/selector';
-import { useDispatch, useSelector  } from 'react-redux'
+import { useSelector  } from 'react-redux'
 import { SiAirtable } from "react-icons/si";
 import { IoDocuments } from "react-icons/io5";
 import { FaProjectDiagram } from "react-icons/fa";
@@ -25,31 +25,31 @@ function VerticalLayout(){
             </div>
             <div className="vertical-content-wrappers">
                 <div className="vertical-content-wrapper">
-                    <NavLink to= {`/home/user/${userId}`} activeClassName="active" >
+                    <NavLink to= {`/home/user/${userId}`} activeclassname="active" >
                         <SiAirtable className='vertical-icon'/>
                         <span>Table de travail</span>
                     </NavLink>
                 </div>
                 <div className="vertical-content-wrapper">
-                    <NavLink to= {`/demande/user/${userId}`} activeClassName="active" >
+                    <NavLink to= {`/demande/user/${userId}`} activeclassname="active" >
                         <IoDocuments className='vertical-icon'/>
                         <span>Gestion de la demande</span>
                     </NavLink>
                 </div>
                 <div className="vertical-content-wrapper">
-                     <NavLink to= {`/projects/user/${userId}/list`} activeClassName="active" >
+                     <NavLink to= {`/projects/user/${userId}/list`} activeclassname="active" >
                         <FaProjectDiagram className='vertical-icon'/>
                         <span>Gestion des projets</span>
                     </NavLink>
                 </div>
                 <div className="vertical-content-wrapper">
-                     <NavLink to= {`/tests/user/${userId}/overview`} activeClassName="active" >
+                     <NavLink to= {`/tests/user/${userId}/overview`} activeclassname="active" >
                         <SiVitest className='vertical-icon'/>
                         <span>Gestion des tests</span>
                     </NavLink>
                 </div>
                 <div className="vertical-content-wrapper">
-                     <NavLink to= {`/raports/user/${userId}/developResourceList`} activeClassName="active" >
+                     <NavLink to= {`/raports/user/${userId}/developResourceList`} activeclassname="active" >
                         <LuTestTubes className='vertical-icon'/>
                         <span>Analysis</span>
                     </NavLink>

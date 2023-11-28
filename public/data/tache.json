@@ -1,0 +1,105 @@
+{
+    "exampleProject": {
+        "version": "v 1.0",
+        "J'ai crée": [
+            {
+                "priorité": "P0",
+                "numéro": "défaut 1",
+                "type": "défaut",
+                "déscription": "pas d'enregistrement de données dans l'historique après avoir parcouru le produit",
+                "responsable": "Robin",
+                "Estimation temps": "0h",
+                "status": "Nouveau",
+                "acceptable": false
+            },
+            {
+                "priorité": "P0",
+                "numéro": "défaut 2",
+                "type": "défaut",
+                "déscription": "pouvez pas afficher l'image du produit en grand",
+                "responsable": "Robin",
+                "Estimation temps": "0h",
+                "status": "Nouveau",
+                "acceptable": false
+            },
+            {
+                "priorité": "P0",
+                "numéro": "défaut 3",
+                "type": "défaut",
+                "déscription": "filtre par marque ne fonctionne pas",
+                "responsable": "A réclamer",
+                "Estimation temps": "0h",
+                "status": "Nouveau",
+                "acceptable": false
+            },
+            {
+                "priorité": "P0",
+                "numéro": "T1",
+                "type": "tâche",
+                "déscription": "ultilisateur modifie mot de passe",
+                "responsable": "A réclamer",
+                "Estimation temps": "0h",
+                "status": "Nouveau",
+                "acceptable": false
+            },
+            {
+                "priorité": "P0",
+                "numéro": "T2",
+                "type": "tâche",
+                "déscription": "ultilisateur modifie photo profil",
+                "responsable": "A réclamer",
+                "Estimation temps": "0h",
+                "status": "Nouveau",
+                "acceptable": false
+            },
+            {
+                "priorité": "P0",
+                "numéro": "T3",
+                "type": "tâche",
+                "déscription": "suppression groupée d'articles du panier",
+                "responsable": "A réclamer",
+                "Estimation temps": "100h",
+                "status": "Nouveau",
+                "acceptable": false
+            },
+            {
+                "priorité": "P0",
+                "numéro": "D1",
+                "type": "demande",
+                "déscription": "suppression des articles non valables du panier",
+                "responsable": "A réclamer",
+                "Estimation temps": "0h",
+                "status": "Nouveau",
+                "acceptable": false
+            },
+            {
+                "priorité": "P1",
+                "numéro": "D2",
+                "type": "demande",
+                "déscription": "Gestion du module d'adresse",
+                "responsable": "A réclamer",
+                "Estimation temps": "0h",
+                "status": "Nouveau",
+                "acceptable": false
+            },
+            {
+                "priorité": "P0",
+                "numéro": "D3",
+                "type": "demande",
+                "déscription": "Module de connexion de l'utilisateur",
+                "responsable": "A réclamer",
+                "Estimation temps": "0h",
+                "status": "Nouveau",
+                "acceptable": false
+            }
+        ]
+    },
+    "project 2": {
+        "J'ai effectué": "",
+        "J'ai crée": ""
+    },
+    "project 3": {
+        "J'ai effectué": "",
+        "J'ai crée": ""
+    }
+}

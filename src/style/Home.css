@@ -16,7 +16,7 @@
 .app-content {
     display: flex;
     flex-direction: column;
-    /*  background-color: #bebcbc; */
+    margin-left: 144px;
 }
 
 .app-table {
@@ -88,4 +88,36 @@
     display: flex;
     flex-direction: column;
 
+}
+
+.TableDeTaches {
+    width: 60%;
+    margin: 20px 15px;
+    background-color: #ffff;
+}
+
+.taches-title {
+    display: flex;
+    justify-content: space-between;
+}
+
+.title1 {
+    margin-left: 15px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #798596;
+}
+
+.title2 {
+    margin-right: 386px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #798596;
+}
+
+.box-project {
+    width: 60%;
+    height: 184px;
+    background-color: #ffff;
+    margin: 20px 15px;
 }
