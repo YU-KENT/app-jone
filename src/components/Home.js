@@ -1,104 +1,45 @@
 import '../style/Home.css';
 import VerticalLayout from './VerticalLayout';
 import ThreeColumnComponent from '../components/containers/Table'
-import { useState,useEffect } from 'react';
-import { IoMdArrowDropdown } from "react-icons/io";
+import { useState } from 'react';
+import Dropdown from './containers/Dropdown';
 import TacheModal from './containers/TacheModal';
 import {loginState} from '../outils/selector';
 import { useSelector } from 'react-redux'
-
+import services from '../service/dataService';
 
 function Home(){
-
-const [data1, setData1] = useState(null);
-const [data2, setData2] = useState(null);
 const [projectName,setProjectName] = useState('exampleProject');
-const [version, setVersion] = useState('')
-const [isDropdownOpen, setDropdownOpen] = useState(false);
-const [projectNameArray,seProjectNameArray] = useState([]);
 const [isOpen,setModalOpen]= useState(false)
 const [tache, setTache] = useState(null)
 const state = useSelector(loginState)
 const {UserName} = state
+//get all datas 
+const userDatas = services.getUserData(projectName); 
+const projectNameArray = services.getProjectNameArray();
+const version = services.getProjectVersion(projectName)
+const newTaches = services.getProjectTachesBrief(projectName,UserName)
+const dataProject = services.getProjectTachesEntire(projectName)
 
-const getPropertyKeys = (obj)=> {
-    return Object.keys(obj);}
-const handleData = (obj)=>{
-    let array = obj["J'ai crée"]
-    let newArray =[]
-    for(let i=0; i < array.length; i++){
-       if(array[i].responsable === UserName){
-         newArray.push(array[i]);   
-      }
-    }
-    return { "J'ai crée":array,
-             "J'effectue": newArray
-    }
-}
-
-useEffect(() => {
-    const fetchData = async ({name}) => {
-      try {
-        const response1 = await fetch('/data/user.json');
-        const response2 = await fetch('/data/tache.json');
-        const data1 = await response1.json();
-        const data2 = await response2.json();
-      
-        const tacheData1 = data1.projects;
-        const tacheData2 = data2[name];
-        const version = tacheData2.version
-        setVersion(version)
-        const newData2 = handleData(tacheData2)
-        setData2(newData2);
-        seProjectNameArray(getPropertyKeys(tacheData1));
-
-        if (tacheData1.hasOwnProperty(name)) {
-          // Set the data state with the project data
-          setData1(tacheData1[name]);
-        } 
-        
-      } catch (error) {
-        console.error('Error fetching data:', error);
-      }
-    };
- 
-    fetchData({ name: projectName });;
-
-}, [projectName]); 
-
-const changeProject =(name)=>{
-    setProjectName(name);
-    setDropdownOpen(false)
-}
 
 const handleClickTache =(tache)=>{
-    console.log("parent----- component",tache)
-    setModalOpen(true);
-    setTache(tache);
-
+    const taches = dataProject["taches"]
+    for(let i= 0; i < taches.length; i++){
+      if(taches[i].description === tache.description){
+        
+        setModalOpen(true);
+        setTache(taches[i]);
+      }
+      else {
+        setModalOpen(true);
+        setTache(tache)}
+    }
 }
-const Dropdown = () => {
-    const toggleDropdown = () => {
-      setDropdownOpen(!isDropdownOpen);
-    };
 
-    return (
-      <div className="dropdown">
-        <div className="dropbtn" onClick={toggleDropdown}>
-          Projet <IoMdArrowDropdown className='icon-dropdown'/>
-        </div>
-        {isDropdownOpen && (
-          <div className="dropdown-content">
-            {projectNameArray.map((name)=>{
-                return <div onClick={() => changeProject(name)}>{name}</div>
+const handleClickProjectName =(name)=>{
+    setProjectName(name);
+}
 
-            })}
-          </div>
-        )}
-      </div>
-    );
-  };
-  
 return(
     <><main className='main-app'>
         <VerticalLayout />
@@ -110,14 +51,18 @@ return(
                 <div className='app-table-header'>
                     <span className='app-table-title'>Mention tâche</span>
                     <span className='app-table-project'>
-                        {Dropdown()}
+                        <Dropdown 
+                        array={projectNameArray}
+                        handleClick ={handleClickProjectName}
+                        />
                     </span>
                     <span className='projectName'>{projectName}</span>
                 </div>
-                {data1 && <ThreeColumnComponent className='TableDeTravail' 
-                data={data1} 
+                {<ThreeColumnComponent className='TableDeTravail' 
+                data={userDatas} 
                 defaultKey='Tâches inacceptés' 
                 isFunctionDisable={false} 
+                projectName={projectName}
                 handleClick = {handleClickTache}
                 />}
                 <div className='taches-title'>
@@ -125,10 +70,11 @@ return(
                     <span className='title2'>Notification</span>
                </div>
                <div className='list-taches'>
-                    {data2 && <ThreeColumnComponent className='TableDeTaches' 
-                    data={data2} 
+                    {<ThreeColumnComponent className='TableDeTaches' 
+                    data={newTaches} 
                     defaultKey="J'ai crée"
                     isFunctionDisable={false}
+                    projectName={projectName}
                     handleClick = {handleClickTache}
                    />}
                    <span>projet en cours</span>
@@ -147,7 +93,7 @@ return(
         <div>
             <TacheModal 
             projectName={projectName} 
-            
+            paticipants={dataProject.paticipants}
             data={tache} 
             closeClick = {()=> setModalOpen(false)} />
         </div> :''

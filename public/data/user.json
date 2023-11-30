@@ -10,20 +10,20 @@
         "exampleProject": {
             "Tâches inacceptés": [
                 {
-                    "priorité": "P0",
-                    "numéro": "défaut 5",
+                    "priorite": "P0",
+                    "numero": "défaut 5",
                     "type": "défaut",
-                    "déscription": "panier n'affiche pas entièrement en mobile",
+                    "description": "panier n'affiche pas entièrement en mobile",
                     "responsable": "A réclamer",
                     "Estimation temps": "0h",
                     "status": "Nouveau",
                     "acceptable": true
                 },
                 {
-                    "priorité": "P0",
-                    "numéro": "défaut 6",
+                    "priorite": "P0",
+                    "numero": "défaut 6",
                     "type": "défaut",
-                    "déscription": "code promo ne fonctionne pas",
+                    "description": "code promo ne fonctionne pas",
                     "responsable": "A réclamer",
                     "Estimation temps": "0h",
                     "status": "Nouveau",
@@ -32,10 +32,10 @@
             ],
             "Tâches inaccomplis": [
                 {
-                    "priorité": "P0",
-                    "numéro": "défaut 4",
+                    "priorite": "P0",
+                    "numero": "défaut 4",
                     "type": "défaut",
-                    "déscription": "pouvez pas afficher l'image du produit en grand",
+                    "description": "pouvez pas afficher l'image du produit en grand",
                     "responsable": "A réclamer",
                     "Estimation temps": "0h",
                     "status": "Nouveau",

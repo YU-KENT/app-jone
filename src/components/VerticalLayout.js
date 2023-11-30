@@ -16,7 +16,6 @@ function VerticalLayout(){
     const state = useSelector(loginState)
     const{id,UserName} = state;
     let userId =  id;
-    console.log("vertical-state",state)
 
     return(
         <div className="vertical-content">

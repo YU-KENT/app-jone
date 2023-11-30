@@ -9,11 +9,13 @@ import { FaLightbulb } from "react-icons/fa";
 import { MdSignalWifiStatusbar1Bar } from "react-icons/md";
 import { IoPersonCircleOutline } from "react-icons/io5";
 import { FcHighPriority } from "react-icons/fc";
+import DatesPicker from './DatesPicker';
+import NoteComponent from'./NoteComponent';
 
-function TacheModal({projectName,closeClick,data}){
+function TacheModal({projectName,closeClick,data,paticipants}){
     const [activeInfo, setActiveInfo] = useState('Infos essentielles');
 
-    console.log("projectName-------",projectName)
+    console.log("paticipants",paticipants)
 
     const infosArray = ['Infos essentielles','Tâches dérivées','Tâches associées','Heures d\'ouverture','Annexe']
     const infosElements = infosArray.map((info) => (
@@ -61,7 +63,14 @@ function TacheModal({projectName,closeClick,data}){
                 <span>Heures estimées</span>
                 <span className='info-value'>0 h</span>
             </div>
-            
+            <div className='info-box'>
+                <span>la date démarrage</span>
+                <DatesPicker className='info-value'/>
+            </div>
+            <div className='info-box'>
+                <span>Note</span>
+                <NoteComponent/>
+            </div> 
         </div> 
         )
       }
@@ -76,7 +85,7 @@ return(
                     <div className='modal-header_title'>
                         {iconTache(data.type)}
                         <span className='modal-type'>{data.type} :</span>
-                        <span>{data.numéro}</span>
+                        <span>{data.numero}</span>
                     </div>
                     <div className='projectname'>{projectName}</div>
                 </div>
@@ -86,71 +95,73 @@ return(
                     <div className='modal-header_button' onClick={()=>closeModal()}><IoMdClose/></div>
                 </div>
             </div>
-            <div className='modal_content-left'>
-                <h2>{data.déscription}</h2>
-                <button  disabled={!data.acceptable}>
-                 Accepter
-               </button>
-                <div className='modal-infos'>
-                    <div className='modal-info'>
-                        <div className='modal-info-icon'>
-                           <MdSignalWifiStatusbar1Bar className='icon-status'/>
+            <div className='modal_all'>
+                <div className='modal_content-left'>
+                    <h2>{data.description}</h2>
+                    <button  disabled={!data.acceptable}>
+                    Accepter
+                </button>
+                    <div className='modal-infos'>
+                        <div className='modal-info'>
+                            <div className='modal-info-icon'>
+                            <MdSignalWifiStatusbar1Bar className='icon-status'/>
+                            </div>
+                            <div className='modal-info-content'>
+                                <span className='label'>Status</span> 
+                                <span>{data.status}</span>
+                            </div>
                         </div>
-                        <div className='modal-info-content'>
-                            <span className='label'>Status</span> 
-                            <span>{data.status}</span>
+
+                        <div className='modal-info'>
+                            <div className='modal-info-icon'>
+                            <IoPersonCircleOutline className='icon-responsable'/>
+                            </div>
+                            
+                            <div className='modal-info-content'>
+                                <span className='label'>Résponsable</span> 
+                                <span>{data.responsable}</span>
+                            </div>
+                        </div>
+
+                        <div className='modal-info'>
+                            <div className='modal-info-icon'>
+                            <FcHighPriority  className='icon-priority'/>
+                            </div>
+                            
+                            <div className='modal-info-content'>
+                                <span className='label'>Priorité</span> 
+                                <span>{data.priorité}</span>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div className='infos-contents'>
+                        <div className='infos-titles'>
+                            {infosElements}
                         </div>
                     </div>
+                    <div  key='Infos essentielles' className={`info-modal ${activeInfo === 'Infos essentielles'? 'active':''}`}>
+                        {infoEs_content(data)}
+                    </div>
+                    <div key='Tâches dérivées' className={`info-modal ${activeInfo === 'Tâches dérivées'? 'active':''}`} >
+                        <div>run 2</div>
+                    </div>
+                    <div key='Tâches associées' className={`info-modal ${activeInfo === 'Tâches associées'? 'active':''}`}>
+                        <div>run 3</div>
+                    </div>
+                    <div key="Heures d'ouverture" className={`info-modal ${activeInfo === "Heures d'ouverture"? 'active':''}`}>
 
-                    <div className='modal-info'>
-                        <div className='modal-info-icon'>
-                         <IoPersonCircleOutline className='icon-responsable'/>
-                        </div>
-                        
-                        <div className='modal-info-content'>
-                            <span className='label'>Résponsable</span> 
-                            <span>{data.responsable}</span>
-                        </div>
+                </div>
+                    <div key='Annexe' className={`info-modal ${activeInfo === 'Annexe'? 'active':''}`} >
+
                     </div>
 
-                    <div className='modal-info'>
-                        <div className='modal-info-icon'>
-                        <FcHighPriority  className='icon-priority'/>
-                        </div>
-                        
-                        <div className='modal-info-content'>
-                            <span className='label'>Priorité</span> 
-                            <span>{data.priorité}</span>
-                        </div>
-                    </div>
 
                 </div>
-                <div className='infos-contents'>
-                    <div className='infos-titles'>
-                        {infosElements}
-                    </div>
-                </div>
-                <div  key='Infos essentielles' className={`info-modal ${activeInfo === 'Infos essentielles'? 'active':''}`}>
-                    {infoEs_content(data)}
-                </div>
-                <div key='Tâches dérivées' className={`info-modal ${activeInfo === 'Tâches dérivées'? 'active':''}`} >
-                    <div>run 2</div>
-                </div>
-                <div key='Tâches associées' className={`info-modal ${activeInfo === 'Tâches associées'? 'active':''}`}>
-                    <div>run 3</div>
-                </div>
-                <div key="Heures d'ouverture" className={`info-modal ${activeInfo === "Heures d'ouverture"? 'active':''}`}>
-
-               </div>
-                <div key='Annexe' className={`info-modal ${activeInfo === 'Annexe'? 'active':''}`} >
+                <div className='modal_content-right'>
+                
 
                 </div>
-
-
-            </div>
-            <div className='modal_content-right'>
-
-
             </div>
         </div>
     </div> 

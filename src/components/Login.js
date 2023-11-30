@@ -8,9 +8,6 @@ import { FaGoogle } from "react-icons/fa";
 import { FaTwitter } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
 import * as loginActions from '../features/loginReducer'
-
-
-/* import { RequestLogin,RequestGetProfile } from '../outils/request' */
 import '../style/Login.css'
 
 function Login(){
@@ -18,7 +15,7 @@ function Login(){
     const dispatch = useDispatch() 
     const navigate = useNavigate()
     const state = useSelector(loginState)
-    const{UserEmail,PassWord,ValideEmail,VaidePassword,ErrorMsg,id} = state
+    const{/* UserEmail,PassWord, */ValideEmail,VaidePassword,ErrorMsg,id} = state
 
     const handleSubmit = async (e)=>{
         e.preventDefault();
@@ -28,7 +25,7 @@ function Login(){
             const response = await fetch('/data/user.json');
             const data = await response.json();
             const userData = data.user;
-            console.log('userData', userData);
+            // got userdata from local data then stock in redux user id and name
             await dispatch(loginActions.setUserId(userData.id));
             await dispatch(loginActions.setUserName(userData.UserName));
             console.log("id",id)

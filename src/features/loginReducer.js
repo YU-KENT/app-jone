@@ -21,7 +21,7 @@ reducers :{
         payload:{value}
       }),  
       reducer:(state,action)=>{
-          const regexEmail= /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g
+          const regexEmail = /^[\w-.]+@([\w-]+\.)+[\w-]{2,4}$/g;
           const email= action.payload.value
           if(!regexEmail.test(email) ){
             return{...state,ErrorMsg :'',UserEmail:email,ValideEmail :false}
