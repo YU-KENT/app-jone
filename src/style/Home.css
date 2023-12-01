@@ -1,5 +1,5 @@
 .header-app {
-    width: 1296px;
+    width: 1278px;
     height: 56px;
 }
 
@@ -16,7 +16,8 @@
 .app-content {
     display: flex;
     flex-direction: column;
-    margin-left: 144px;
+    height: 830px;
+    overflow: auto;
 }
 
 .app-table {
@@ -91,7 +92,6 @@
 }
 
 .TableDeTaches {
-    width: 60%;
     margin: 20px 15px;
     background-color: #ffff;
 }
@@ -116,8 +116,176 @@
 }
 
 .box-project {
-    width: 60%;
     height: 184px;
     background-color: #ffff;
     margin: 20px 15px;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.icons-counting {
+    display: flex;
+    justify-content: space-around;
+}
+
+.box-project-content {
+    width: 70%;
+    display: flex;
+    padding-left: 50px;
+    height: 50%;
+    align-items: center;
+}
+
+.counting {
+    display: flex;
+    width: 35px;
+    height: 25px;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 18px;
+}
+
+.bg-icon-bsBox {
+    position: relative;
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    background-color: #e6eff8;
+}
+
+.icon-bsBox {
+    font-size: 45px;
+    color: #0080ff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.box-project-button .modal-header_button {
+    text-align: right;
+    margin-top: 10px;
+}
+
+.project-counting {
+    margin-left: 70px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 100%;
+    position: relative;
+
+}
+
+.project-counting div {
+    display: flex;
+    align-items: center;
+
+}
+
+.icon-etoile {
+    position: absolute;
+    top: 7%;
+    font-size: 22px;
+    margin-left: 10px;
+}
+
+.box-project-version-date {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 19px 20px 4px 59px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.taches-notes {
+    display: flex;
+}
+
+.list-taches {
+    width: 60%;
+}
+
+.list-notes {
+    width: 40%;
+}
+
+.list-notes p {
+    font-size: 14px;
+    margin: 0;
+}
+
+.list-notes-contents {
+    margin: 20px 15px;
+    height: 507px;
+    background-color: #ffff;
+    overflow: auto;
+}
+
+.vide-notification {
+    width: 100%;
+    height: 507px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.note-container {
+    border-bottom: 1px solid rgb(233, 227, 227);
+    padding: 10px 0 0 0;
+    margin: 0 18px;
+}
+
+.note-content {
+    display: flex;
+    align-items: center;
+}
+
+.icon-note-user {
+    color: #798596;
+    font-size: 25px;
+    margin-right: 8px;
+}
+
+.note-createur {
+    margin-right: 5px;
+}
+
+.note-action {
+    white-space: nowrap;
+    width: auto;
+    margin-right: 5px;
+    font-weight: 600;
+}
+
+.note-time {
+    display: inline-block;
+    width: 255px;
+    padding-left: 33px;
+    color: #798596;
+}
+
+.note-project_name {
+    color: #798596;
+}
+
+.note-desc {
+    cursor: pointer;
+    color: #0080ff;
+    max-width: 237px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin: 0 5px;
+}
+
+.note-time-name {
+    padding-bottom: 10px;
+    font-size: 12px !important;
+}
+
+.bleu-character {
+    color: #0080ff;
 }

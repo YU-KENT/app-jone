@@ -14,3 +14,22 @@ export const handleData = (obj,UserName)=>{
              "J'effectue": newArray
     }
 }
+
+export const handleNotesDateSorting = (taches) => {
+    let notes = [];
+  
+    for (let i = 0; i < taches.length; i++) {
+      taches[i].notes.forEach((note) => {
+        const newNote = {
+          "description": taches[i].description,
+          ...note
+        };
+        notes.push(newNote);
+      });
+    }
+    if(notes.length > 0){
+        notes.sort((a, b) => new Date(b.time) - new Date(a.time));
+    }
+    return notes;
+  };
+ 

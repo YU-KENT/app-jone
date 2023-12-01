@@ -99,8 +99,8 @@ return(
                 <div className='modal_content-left'>
                     <h2>{data.description}</h2>
                     <button  disabled={!data.acceptable}>
-                    Accepter
-                </button>
+                      Accepter
+                   </button>
                     <div className='modal-infos'>
                         <div className='modal-info'>
                             <div className='modal-info-icon'>
@@ -130,7 +130,7 @@ return(
                             
                             <div className='modal-info-content'>
                                 <span className='label'>Priorité</span> 
-                                <span>{data.priorité}</span>
+                                <span>{data.priorite}</span>
                             </div>
                         </div>
 

@@ -20,7 +20,7 @@ function Dropdown({array,handleClick})  {
         {isDropdownOpen && (
           <div className="dropdown-content">
             {array.map((name)=>{
-                return <div onClick={() => changeProject(name)}>{name}</div>
+                return <div key={name} onClick={() => changeProject(name)}>{name}</div>
 
             })}
           </div>

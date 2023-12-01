@@ -1,6 +1,7 @@
 {
     "exampleProject": {
         "version": "v 1.0",
+        "timestamp": "2021-09-11T08:30:00.000Z",
         "taches": [
             {
                 "priorite": "P0",
@@ -9,22 +10,22 @@
                 "description": "pas d'enregistrement de données dans l'historique après avoir parcouru le produit",
                 "responsable": "Robin",
                 "version": "v 1.0",
-                "Date à commencer": "",
+                "date a commencer": "",
                 "Estimation temps": "0h",
                 "status": "Nouveau",
                 "acceptable": false,
                 "notes": [
                     {
-                        "créateur": "Alex",
+                        "createur": "Alex",
                         "action": "mis à jour la note",
                         "message": "c'est urgent ",
-                        "date": ""
+                        "time": "2022-11-01T12:45:00.000Z"
                     },
                     {
-                        "créateur": "Alex",
+                        "createur": "Alex",
                         "action": "modifie la priorite",
-                        "message": "nouvell priorite est ",
-                        "date": ""
+                        "message": "nouvelle priorité est ",
+                        "time": "2022-09-27T18:20:00.000Z"
                     }
                 ]
             },
@@ -35,22 +36,22 @@
                 "description": "pouvez pas afficher l'image du produit en grand",
                 "responsable": "Robin",
                 "version": "v 1.0",
-                "Date à commencer": "",
+                "date a commencer": "",
                 "Estimation temps": "0h",
                 "status": "Nouveau",
                 "acceptable": false,
                 "notes": [
                     {
-                        "créateur": "Alex",
+                        "createur": "Alex",
                         "action": "mis à jour la note",
                         "message": "c'est urgent ",
-                        "date": ""
+                        "time": "2022-10-05T09:15:00.000Z"
                     },
                     {
-                        "créateur": "Alex",
+                        "createur": "Alex",
                         "action": "modifie le version",
-                        "message": "nouveau version est ",
-                        "date": ""
+                        "message": "nouvelle version est ",
+                        "time": "2022-11-13T14:30:00.000Z"
                     }
                 ]
             },
@@ -62,21 +63,21 @@
                 "responsable": "A réclamer",
                 "Estimation temps": "0h",
                 "version": "v 1.0",
-                "Date à commencer": "",
+                "date a commencer": "",
                 "status": "Nouveau",
                 "acceptable": false,
                 "notes": [
                     {
-                        "créateur": "Alex",
+                        "createur": "Alex",
                         "action": "mis à jour la note",
                         "message": "c'est urgent ",
-                        "date": ""
+                        "time": "2022-10-13T16:20:00.000Z"
                     },
                     {
-                        "créateur": "Alex",
+                        "createur": "Alex",
                         "action": "modifie la priorite",
-                        "message": "nouvell priorite est ",
-                        "date": ""
+                        "message": "nouvelle priorité est ",
+                        "time": "2022-11-20T21:45:00.000Z"
                     }
                 ]
             },
@@ -84,25 +85,25 @@
                 "priorite": "P0",
                 "numero": "T1",
                 "type": "tâche",
-                "description": "ultilisateur modifie mot de passe",
+                "description": "utilisateur modifie mot de passe",
                 "responsable": "A réclamer",
                 "Estimation temps": "0h",
                 "version": "v 1.0",
-                "Date à commencer": "",
+                "date a commencer": "",
                 "status": "Nouveau",
                 "acceptable": false,
                 "notes": [
                     {
-                        "créateur": "Alex",
+                        "createur": "Alex",
                         "action": "mis à jour la note",
                         "message": "c'est urgent ",
-                        "date": ""
+                        "time": "2022-12-01T07:10:00.000Z"
                     },
                     {
-                        "créateur": "Robin",
+                        "createur": "Robin",
                         "action": "modifie le version",
-                        "message": "nouveau version est ",
-                        "date": ""
+                        "message": "nouvelle version est ",
+                        "time": "2022-12-07T11:55:00.000Z"
                     }
                 ]
             },
@@ -110,25 +111,25 @@
                 "priorite": "P0",
                 "numero": "T2",
                 "type": "tâche",
-                "description": "ultilisateur modifie photo profil",
+                "description": "utilisateur modifie photo profil",
                 "responsable": "A réclamer",
                 "Estimation temps": "0h",
                 "version": "v 1.0",
-                "Date à commencer": "",
+                "date a commencer": "",
                 "status": "Nouveau",
                 "acceptable": false,
                 "notes": [
                     {
-                        "créateur": "Alex",
+                        "createur": "Alex",
                         "action": "mis à jour la note",
                         "message": "c'est urgent ",
-                        "date": ""
+                        "time": "2022-11-08T13:40:00.000Z"
                     },
                     {
-                        "créateur": "Alex",
+                        "createur": "Alex",
                         "action": "modifie la priorite",
-                        "message": "nouvell priorite est ",
-                        "date": ""
+                        "message": "nouvelle priorité est ",
+                        "time": "2022-10-17T19:25:00.000Z"
                     }
                 ]
             },
@@ -140,21 +141,21 @@
                 "responsable": "A réclamer",
                 "Estimation temps": "100h",
                 "version": "v 1.0",
-                "Date à commencer": "",
+                "date a commencer": "",
                 "status": "Nouveau",
                 "acceptable": false,
                 "notes": [
                     {
-                        "créateur": "Alex",
+                        "createur": "Alex",
                         "action": "mis à jour la note",
                         "message": "c'est urgent ",
-                        "date": ""
+                        "time": "2022-12-11T16:55:00.000Z"
                     },
                     {
-                        "créateur": "Alex",
+                        "createur": "Alex",
                         "action": "modifie la priorite",
-                        "message": "nouvell priorite est ",
-                        "date": ""
+                        "message": "nouvelle priorité est ",
+                        "time": "2022-12-21T23:10:00.000Z"
                     }
                 ]
             },
@@ -166,9 +167,23 @@
                 "responsable": "A réclamer",
                 "Estimation temps": "0h",
                 "version": "v 1.0",
-                "Date à commencer": "",
+                "date a commencer": "",
                 "status": "Nouveau",
-                "acceptable": false
+                "acceptable": false,
+                "notes": [
+                    {
+                        "createur": "Alex",
+                        "action": "mis à jour la note",
+                        "message": "c'est urgent ",
+                        "time": "2022-09-28T14:15:00.000Z"
+                    },
+                    {
+                        "createur": "Alex",
+                        "action": "modifie la priorite",
+                        "message": "nouvelle priorité est ",
+                        "time": "2022-09-29T20:30:00.000Z"
+                    }
+                ]
             },
             {
                 "priorite": "P1",
@@ -178,21 +193,21 @@
                 "responsable": "A réclamer",
                 "Estimation temps": "0h",
                 "version": "v 1.0",
-                "Date à commencer": "",
+                "date a commencer": "",
                 "status": "Nouveau",
                 "acceptable": false,
                 "notes": [
                     {
-                        "créateur": "Alex",
+                        "createur": "Alex",
                         "action": "mis à jour la note",
                         "message": "c'est urgent ",
-                        "date": ""
+                        "time": "2022-09-29T17:40:00.000Z"
                     },
                     {
-                        "créateur": "Alex",
+                        "createur": "Alex",
                         "action": "modifie la priorite",
-                        "message": "nouvell priorite est ",
-                        "date": ""
+                        "message": "nouvelle priorité est ",
+                        "time": "2022-09-26T23:05:00.000Z"
                     }
                 ]
             },
@@ -204,37 +219,41 @@
                 "responsable": "A réclamer",
                 "Estimation temps": "0h",
                 "version": "v 1.0",
-                "Date à commencer": "",
+                "date a commencer": "",
                 "status": "Nouveau",
                 "acceptable": false,
                 "notes": [
                     {
-                        "créateur": "Alex",
+                        "createur": "Alex",
                         "action": "mis à jour la note",
                         "message": "c'est urgent ",
-                        "date": ""
+                        "time": "2022-10-27T18:30:00.000Z"
                     },
                     {
-                        "créateur": "Alex",
+                        "createur": "Alex",
                         "action": "modifie la priorite",
-                        "message": "nouvell priorite est ",
-                        "date": ""
+                        "message": "nouvelle priorité est ",
+                        "time": "2022-10-28T23:45:00.000Z"
                     }
                 ]
             }
         ],
-        "paticipants": [
+        "participants": [
             "Robin",
             "Alex",
             "Chloé"
         ]
     },
     "project 2": {
+        "version": "v 1.0",
+        "timestamp": "2023-01-15T10:00:00.000Z",
         "taches": "",
-        "paticipants": ""
+        "participants": ""
     },
     "project 3": {
+        "version": "v 1.0",
+        "timestamp": "2023-05-20T14:45:00.000Z",
         "taches": "",
-        "paticipants": ""
+        "participants": ""
     }
 }
