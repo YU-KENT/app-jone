@@ -1,5 +1,6 @@
 ## Jone is under construction. For now, you can see a preview of this application at
 https://app-jone.vercel.app/
+
 # Jone: Digital Management Platform for Development Teams
 
 Jone is a digital management platform dedicated to development teams. The goal is to make the developer's job easier and clearer. With this app, you can:
@@ -22,4 +23,4 @@ As a leader, Jone helps you:
 
 ## Getting Started
 
-Jone is 
+
