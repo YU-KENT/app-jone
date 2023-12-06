@@ -18,7 +18,7 @@
     top: 50%;
     transform: translate(-50%, -50%);
     width: 1280px;
-    height: 83%;
+    height: 690px;
     background-color: #ffff;
     border-radius: 2px;
 }
@@ -295,4 +295,71 @@ button:disabled {
     height: 600px;
     overflow: auto;
     border-left: 1px solid rgb(233, 227, 227)
+}
+
+.note-firstLine {
+    display: flex;
+}
+
+.note-firstLine span.note-time {
+    padding-left: 20px;
+}
+
+.icon-note-pen {
+    margin-right: 7px;
+}
+
+.note-secondLine p {
+    display: flex;
+    align-items: center;
+    margin: 0
+}
+
+.icon-note-arrow {
+    font-size: 18px;
+    margin-right: 7px;
+}
+
+.modal-participant {
+    border-bottom: 1px solid rgb(233, 227, 227);
+    padding: 10px 20px;
+}
+
+.modal-participant span {
+    display: flex;
+    margin-right: 15px;
+}
+
+.modal-participant div {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.modal-participant-title {
+    color: #1890ff !important;
+    font-weight: 600;
+    background-color: #ffff;
+
+}
+
+.modal-participant-numero {
+    margin-left: 10px;
+    font-size: 18px;
+
+}
+
+.modal-note-title {
+    display: flex;
+    color: #1890ff !important;
+    font-weight: 600;
+    background-color: #ffff;
+    margin-left: 20px;
+    margin-top: 15px;
+}
+
+.icon-modal-add {
+    color: #1890ff;
+
+    font-size: 22px;
 }

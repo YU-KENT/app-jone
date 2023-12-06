@@ -17,7 +17,6 @@ export const handleData = (obj,UserName)=>{
 
 export const handleNotesDateSorting = (taches) => {
     let notes = [];
-  
     for (let i = 0; i < taches.length; i++) {
       taches[i].notes.forEach((note) => {
         const newNote = {
@@ -27,9 +26,22 @@ export const handleNotesDateSorting = (taches) => {
         notes.push(newNote);
       });
     }
-    if(notes.length > 0){
-        notes.sort((a, b) => new Date(b.time) - new Date(a.time));
-    }
+    notes.sort((a, b) => new Date(b.time) - new Date(a.time));
+    return notes;
+  };
+
+  export const handleNotesByTache = (tache) => {
+    let notes = [];
+    tache.notes.forEach((note) =>{
+        const newNote = {
+          "description": tache.description,
+          ...note
+        }
+        notes.push(newNote);
+      });
+    
+      notes.sort((a, b) => new Date(b.time) - new Date(a.time));
+    
     return notes;
   };
  

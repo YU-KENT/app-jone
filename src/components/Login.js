@@ -29,7 +29,7 @@ function Login(){
             await dispatch(loginActions.setUserId(userData.id));
             await dispatch(loginActions.setUserName(userData.UserName));
             console.log("id",id)
-            let userId = id;
+            let userId = userData.id;
             navigate(`/home/user/${userId}`)
 
           } catch (error) {
@@ -46,10 +46,8 @@ function Login(){
       
         <main className="main bg-bleu">
                 <div className="header">
-                   
                     <h1 className='header-content'><IoSettingsOutline className='icon-setting' />Une Plateforme numérique de gestion</h1>
-                    <p className='header-content content-p'>pour des équipes de développement </p>
-                    
+                    <p className='header-content content-p'>dédiée aux équipes de développement </p>
                 </div>
                 <section className="sign-in-content">
                     <h1 className="sign-in-title">Se connecter au compte</h1>
@@ -77,7 +75,6 @@ function Login(){
                         <p className='Error_Messages'>{ErrorMsg}</p>
                     </form>
                     <div className="go-registered">
-                        
                         <p>
                             <span className="no-account">Vous n'avez pas encore de compte ?</span>
                             &nbsp;&nbsp;&nbsp;

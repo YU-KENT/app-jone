@@ -1,5 +1,10 @@
 {
     "exampleProject": {
+        "participants": [
+            "Robin",
+            "Alex",
+            "Chloé"
+        ],
         "version": "v 1.0",
         "timestamp": "2021-09-11T08:30:00.000Z",
         "taches": [
@@ -237,11 +242,6 @@
                     }
                 ]
             }
-        ],
-        "participants": [
-            "Robin",
-            "Alex",
-            "Chloé"
         ]
     },
     "project 2": {

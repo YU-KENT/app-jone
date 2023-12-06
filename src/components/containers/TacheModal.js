@@ -11,13 +11,12 @@ import { IoPersonCircleOutline } from "react-icons/io5";
 import { FcHighPriority } from "react-icons/fc";
 import DatesPicker from './DatesPicker';
 import NoteComponent from'./NoteComponent';
+import Notification from './NotificationComponent';
+import { IoAddCircle } from "react-icons/io5";
 
-function TacheModal({projectName,closeClick,data,paticipants}){
+function TacheModal({projectName,closeClick,data,participants}){
     const [activeInfo, setActiveInfo] = useState('Infos essentielles');
-
-    console.log("paticipants",paticipants)
-
-    const infosArray = ['Infos essentielles','Tâches dérivées','Tâches associées','Heures d\'ouverture','Annexe']
+    const infosArray = ['Infos essentielles','Tâches dérivées','Heures d\'ouverture','Annexe']
     const infosElements = infosArray.map((info) => (
         <span key={info} className={`category ${activeInfo === info?'active':''}`}
          onClick={() => handleKeyClick(info)}
@@ -159,8 +158,26 @@ return(
 
                 </div>
                 <div className='modal_content-right'>
-                
-
+                    <div className='modal-participant'>
+                        <div>
+                            <span className='modal-participant-title'>Participants :</span>
+                            <span className='modal-participant-numero'>{participants.length}</span>
+                       </div>
+                       <div>
+                            {participants.map((participant)=>(
+                                <span key={participant}>{participant}</span>)
+                            )}
+                            <span><IoAddCircle className='icon-modal-add'/></span>
+                       </div>
+                    </div>
+                    <div>
+                        <span className='modal-note-title'>Notification: </span>
+                        <Notification 
+                            notes ={data.notes}
+                            projectName = {projectName}
+                            fromHomePage ={false}
+                        />
+                    </div>
                 </div>
             </div>
         </div>

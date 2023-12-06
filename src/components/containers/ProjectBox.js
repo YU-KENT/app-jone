@@ -7,7 +7,7 @@ import { useState } from "react";
 
 
 function ProjectBox ({data,projectName}){
-    console.log("component projectbox",data)
+    
     const [liked, setLiked] = useState(false);
     let numberDefault = 0
     let numberDemande = 0
@@ -86,7 +86,7 @@ function ProjectBox ({data,projectName}){
              </div>
              <div className="box-project-version-date">
                     <div>Version:{data.version}</div>
-                    <div>{data.date?formatDate(data.date):''}</div>
+                    <div>{data.timestamp? formatDate(data.timestamp):''}</div>
              </div>
          </div>
    )

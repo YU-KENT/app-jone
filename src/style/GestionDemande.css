@@ -1,0 +1,64 @@
+.header-app-title_content {
+    font-size: 19px;
+    font-weight: 600;
+    color: #1890ff;
+    border-bottom: 2px solid #1890ff;
+    margin-left: 30px;
+    padding: 6px 0;
+}
+
+.header-app-title_div {
+    display: flex;
+    border-left: 1px solid #ccc;
+    margin-left: 30px;
+}
+
+.btn-add-demande {
+    cursor: pointer;
+    margin-left: 337px;
+    font-size: 17px;
+    width: 196px;
+    height: 60%;
+    display: flex;
+    align-items: center;
+    background-color: rgb(54, 53, 62);
+    color: #ffff;
+    border-radius: 2px;
+}
+
+.icon-demande-add {
+    font-size: 24px;
+    margin: 0 5px;
+}
+
+.header-app-search {
+    position: relative;
+    display: inline-block;
+    margin-left: 14px;
+}
+
+.header-app-search input {
+    padding: 3px 5px;
+    width: 322px;
+    height: 26px;
+    outline: none;
+    border-radius: 2px;
+    border: 2px solid rgb(233, 227, 227);
+}
+
+.header-app-search input:focus {
+    border-color: grey;
+}
+
+.header-app-search input::placeholder {
+    font-size: 17px;
+}
+
+.icon-demande-search {
+    font-size: 20px;
+    color: #8c99aa;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 8px;
+}

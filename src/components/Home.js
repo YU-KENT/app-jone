@@ -9,6 +9,7 @@ import { useSelector } from 'react-redux'
 import services from '../service/dataService';
 import ProjectBox from './containers/ProjectBox';
 import Notification from'./containers/NotificationComponent'
+import{handleNotesByTache} from'../outils/HandleData'
 
 function Home(){
 const [projectName,setProjectName] = useState('exampleProject');
@@ -19,24 +20,27 @@ const {UserName} = state
 //get all datas 
 const userDatas = services.getUserData(projectName); 
 const projectNameArray = services.getProjectNameArray();
-/* const version = services.getProjectVersion(projectName) */
 const newTaches = services.getProjectTachesBrief(projectName,UserName)
 const dataProject = services.getProjectTachesEntire(projectName)
 const notes =  services.getNotesSortingArray(projectName)
 
 const handleClickTache =(tache)=>{
+    setTache(tache)
+    setModalOpen(true)
     const taches = dataProject["taches"]
     for(let i= 0; i < taches.length; i++){
       if(taches[i].description === tache.description){
-        setModalOpen(true);
-        setTache(taches[i]);
+  
+        const notes = handleNotesByTache(taches[i])
+        const newTache = {
+          ...taches[i],
+          "notes":notes
+        }
+        console.log("newTache",newTache)
+        setTache(newTache);
       }
-      else if(tache) {
-        setModalOpen(true);
-        setTache(tache)
-      }
-      else return
     }
+  
 }
 
 const handleClickNote =(note)=>{
@@ -103,11 +107,11 @@ return(
                             {notes?<Notification
                                 notes ={notes}
                                 handleClick = {handleClickNote}
-                                projectName = {projectName}/>
+                                projectName = {projectName}
+                                fromHomePage ={true} />
                             :(<div className='vide-notification'>Aucun Résultat</div>)
                             }
-                        </div>
-                          
+                        </div>      
                       </div>
                   </div>
               </div>
@@ -117,11 +121,13 @@ return(
      </main>
        { isOpen ?
         <div>
-            <TacheModal 
-            projectName={projectName} 
-            paticipants={dataProject.paticipants}
-            data={tache} 
-            closeClick = {()=> setModalOpen(false)} />
+            {dataProject&& <TacheModal 
+                            projectName={projectName} 
+                            participants={dataProject.participants}
+                            data={tache} 
+                            closeClick = {()=> setModalOpen(false)} 
+                            />
+            }
         </div> :''
       }
     </>
