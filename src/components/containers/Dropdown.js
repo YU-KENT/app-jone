@@ -2,12 +2,12 @@ import{useState} from 'react';
 import { IoMdArrowDropdown } from "react-icons/io";
 
 
-function Dropdown({array,handleClick})  {
+export const DropdownHome = ({array,handleClick})=>  {
     const [isDropdownOpen, setDropdownOpen] = useState(false);
     const toggleDropdown = () => {
       setDropdownOpen(!isDropdownOpen);
     };
-    const changeProject =(name)=>{
+    const changeName =(name)=>{
         handleClick(name)
         setDropdownOpen(false)
     }
@@ -20,7 +20,7 @@ function Dropdown({array,handleClick})  {
         {isDropdownOpen && (
           <div className="dropdown-content">
             {array.map((name)=>{
-                return <div key={name} onClick={() => changeProject(name)}>{name}</div>
+                return <div key={name} onClick={() => changeName(name)}>{name}</div>
 
             })}
           </div>
@@ -29,4 +29,3 @@ function Dropdown({array,handleClick})  {
     );
   };
 
-  export default Dropdown

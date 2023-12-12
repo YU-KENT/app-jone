@@ -1,5 +1,5 @@
 .header-app-title_content {
-    font-size: 19px;
+    font-size: 16px;
     font-weight: 600;
     color: #1890ff;
     border-bottom: 2px solid #1890ff;
@@ -15,10 +15,10 @@
 
 .btn-add-demande {
     cursor: pointer;
-    margin-left: 337px;
-    font-size: 17px;
-    width: 196px;
-    height: 60%;
+    margin-left: 446px;
+    font-size: 14px;
+    padding: 5px 7px;
+    height: 20px;
     display: flex;
     align-items: center;
     background-color: rgb(54, 53, 62);
@@ -27,8 +27,9 @@
 }
 
 .icon-demande-add {
-    font-size: 24px;
-    margin: 0 5px;
+    font-size: 18px;
+    margin-right: 4px;
+
 }
 
 .header-app-search {
@@ -39,8 +40,8 @@
 
 .header-app-search input {
     padding: 3px 5px;
-    width: 322px;
-    height: 26px;
+    width: 262px;
+    height: 20px;
     outline: none;
     border-radius: 2px;
     border: 2px solid rgb(233, 227, 227);
@@ -51,14 +52,87 @@
 }
 
 .header-app-search input::placeholder {
-    font-size: 17px;
+    font-size: 14px;
 }
 
 .icon-demande-search {
-    font-size: 20px;
+    font-size: 18px;
     color: #8c99aa;
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
     right: 8px;
+}
+
+.demande-table {
+    margin: 15px 20px 10px 15px;
+    background-color: #ffff;
+}
+
+.demande-table-pages {
+    display: flex;
+    justify-content: space-between;
+    background-color: #ffff;
+    margin: 0 15px 10px 15px;
+    padding: 10px 15px;
+    font-size: 14px;
+}
+
+.btn-pagination-page {
+    border: none;
+    background-color: #8c99aa;
+    color: #ffff;
+
+}
+
+.btn-pagination-page.active {
+    background-color: #1890ff;
+}
+
+.table-buttons {
+    display: flex;
+}
+
+.table-buttons button {
+    border: none;
+    height: 19px;
+}
+
+.table-header-list {
+    display: flex;
+    margin-left: 15px;
+    align-items: center;
+    font-weight: 600;
+}
+
+.table-buttons_info {
+    display: flex;
+    align-items: center;
+}
+
+.icon-demande-list {
+    margin-right: 10px;
+    font-size: 22px;
+}
+
+.table-filters {
+    border-top: 1px solid #ccc;
+    height: 54px;
+    display: flex;
+    align-items: center;
+    color: #8c99aa;
+}
+
+.btnSelect-page select {
+    border-color: #ccc;
+}
+
+.btnSelect-page option {
+    font-size: 9px;
+}
+
+.btn-select {
+    display: flex;
+    width: 18px;
+    height: 18px;
 }

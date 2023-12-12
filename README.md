@@ -9,11 +9,11 @@ Jone is a digital management platform dedicated to development teams. The goal i
 - Experience more efficient and streamlined work processes as a developer.
 - Unify requirements, tasks, and defects with flexible switching between Kanban and list views.
 
-### For Developers:
+### As Developers:
 
 Jone promotes quick and effective work. The platform ensures that requirements, tasks, and defects are unified, allowing for flexible switching between Kanban and list views.
 
-### For Team Leaders:
+### As Team Leader:
 
 As a leader, Jone helps you:
 

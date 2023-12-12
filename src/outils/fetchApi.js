@@ -17,7 +17,7 @@ function FetchApi (url){
         }}
       
         fetchData()
-    }, [])
+    }, [url])
 
     return datas
 }

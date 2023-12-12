@@ -1,9 +1,8 @@
 import FetchApi from "../outils/fetchApi"
 
-import{getPropertyKeys,handleData,handleNotesDateSorting} from'../outils/HandleData'
+import{getPropertyKeys,handleData,handleNotesDateSorting,handleDemandeArray} from'../outils/HandleData'
 
 class service{
-
 
 
 getUserData(projectName){
@@ -46,7 +45,6 @@ getProjectTachesEntire(projectName){
 
 
 getNotesSortingArray(projectName){
-
     const data = FetchApi(('/data/project.json'))
     const project = data[projectName];
     const taches = project && project['taches']
@@ -54,6 +52,13 @@ getNotesSortingArray(projectName){
     return notes
 }
 
+getDemandesArray(projectName){
+    const data = FetchApi(('/data/project.json'))
+    const project = data[projectName];
+    const taches = project && project["taches"]
+    const demandeArray = taches && handleDemandeArray(taches)
+    return demandeArray
+}
 }
 
  const services = new service()

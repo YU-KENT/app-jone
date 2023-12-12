@@ -2,17 +2,20 @@ import '../style/Home.css';
 import VerticalLayout from './VerticalLayout';
 import ThreeColumnComponent from './containers/ThreeColumnComponent'
 import { useState } from 'react';
-import Dropdown from './containers/Dropdown';
+import {DropdownHome} from './containers/Dropdown';
 import TacheModal from './containers/TacheModal';
 import {loginState} from '../outils/selector';
-import { useSelector } from 'react-redux'
+import { useSelector,useDispatch } from 'react-redux'
 import services from '../service/dataService';
 import ProjectBox from './containers/ProjectBox';
 import Notification from'./containers/NotificationComponent'
 import{handleNotesByTache} from'../outils/HandleData'
+import * as actions from '../features/projectReducer'
 
 function Home(){
+const dispatch = useDispatch()
 const [projectName,setProjectName] = useState('exampleProject');
+dispatch(actions.setName('exampleProject'))
 const [isOpen,setModalOpen]= useState(false)
 const [tache, setTache] = useState(null)
 const state = useSelector(loginState)
@@ -57,6 +60,7 @@ const handleClickNote =(note)=>{
 
 const handleClickProjectName =(name)=>{
     setProjectName(name);
+    dispatch(actions.setName(name))
 }
 
 return(
@@ -70,7 +74,7 @@ return(
                   <div className='app-table-header'>
                       <span className='app-table-title'>Mention tâche</span>
                       <span className='app-table-project'>
-                          <Dropdown 
+                          <DropdownHome
                           array={projectNameArray}
                           handleClick ={handleClickProjectName}
                           />

@@ -4,7 +4,7 @@ const {actions, reducer} = createSlice({
 name:'project',
 initialState :{
       version:'',
-      projectName:'exampleProject',
+      projectName:'',
       
 },
 reducers :{

@@ -1,6 +1,6 @@
 .header-app {
     display: flex;
-    width: 1278px;
+    width: 1297px;
     height: 56px;
     align-items: center;
 }
@@ -11,7 +11,7 @@
 
 .header-app-title {
     font-weight: 500;
-    font-size: 19px;
+    font-size: 18px;
     margin-left: 27px;
 }
 
@@ -84,13 +84,21 @@
     left: -137%;
     top: 113%;
     width: 240px;
-    height: 262px;
+    height: 180px;
     background-color: #ffff;
     border-radius: 10px;
     box-shadow: 0 2px 20px rgba(0, 0, 0, .1);
     display: flex;
     flex-direction: column;
+    align-items: center;
 
+}
+
+.dropdown-content div {
+    height: 54px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #798596;
 }
 
 .TableDeTaches {

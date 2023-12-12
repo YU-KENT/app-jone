@@ -45,3 +45,14 @@ export const handleNotesDateSorting = (taches) => {
     return notes;
   };
  
+
+  export const handleDemandeArray =(taches)=>{
+    let demandeArray = [];
+    for (let i = 0; i < taches.length; i++) {
+      if(taches[i].type === "demande"){
+        demandeArray.push(taches[i]);
+      };
+    }
+    return demandeArray;
+
+  }
