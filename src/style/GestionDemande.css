@@ -15,7 +15,7 @@
 
 .btn-add-demande {
     cursor: pointer;
-    margin-left: 446px;
+    margin-left: 481px;
     font-size: 14px;
     padding: 5px 7px;
     height: 20px;
@@ -40,7 +40,7 @@
 
 .header-app-search input {
     padding: 3px 5px;
-    width: 262px;
+    width: 246px;
     height: 20px;
     outline: none;
     border-radius: 2px;
@@ -56,6 +56,7 @@
 }
 
 .icon-demande-search {
+    cursor: pointer;
     font-size: 18px;
     color: #8c99aa;
     position: absolute;
@@ -74,7 +75,7 @@
     justify-content: space-between;
     background-color: #ffff;
     margin: 0 15px 10px 15px;
-    padding: 10px 15px;
+    padding: 20px 15px;
     font-size: 14px;
 }
 
@@ -135,4 +136,94 @@
     display: flex;
     width: 18px;
     height: 18px;
+}
+
+.table-content-titiles {
+    display: flex;
+    position: relative;
+    font-size: 12px;
+    height: 40px
+}
+
+.table-content-titiles div {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    position: absolute;
+
+}
+
+.table-content-titiles div:nth-child(2) {
+    left: 3%;
+}
+
+.table-content-titiles div:nth-child(3) {
+    left: 13%;
+}
+
+.table-content-titiles div:nth-child(4) {
+    left: 48%;
+}
+
+.table-content-titiles div:nth-child(5) {
+    left: 65%;
+}
+
+.table-content-titiles div:nth-child(6) {
+    left: 78%;
+}
+
+.table-content-titiles div:nth-child(7) {
+    left: 90%;
+}
+
+.table-filters .dropdown {
+    margin: 17px;
+}
+
+.table-filters .dropbtn {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+}
+
+.icon-filters-arrow {
+    margin-left: 5px;
+}
+
+.demande-table .table-content {
+    height: 520px;
+}
+
+.table-row {
+    position: relative;
+}
+
+.table-column.demande_numero {
+    position: absolute;
+    left: 36px;
+}
+
+.table-column.demande_description {
+    position: absolute;
+    left: 13%;
+}
+
+.table-column.demande_description:hover {
+    color: #0080ff;
+}
+
+.table-column.demande_Type {
+    position: absolute;
+    left: 65%;
+}
+
+.table-column.demande_esTemps {
+    position: absolute;
+    left: 85%;
+}
+
+.table-column.demande_responsable {
+    position: absolute;
+    left: 78%;
 }

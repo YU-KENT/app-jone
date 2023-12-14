@@ -32,7 +32,7 @@ function VerticalLayout(){
                 <div className="vertical-content-wrapper">
                     <NavLink to= {`/demande/user/${userId}`} activeclassname="active" >
                         <IoDocuments className='vertical-icon'/>
-                        <span>Gestion de la demande</span>
+                        <span>Gestion des besoins</span>
                     </NavLink>
                 </div>
                 <div className="vertical-content-wrapper">

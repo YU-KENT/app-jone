@@ -8,7 +8,7 @@
                 "type": "défaut",
                 "description": "pas d'enregistrement de données dans l'historique après avoir parcouru le produit",
                 "responsable": "Robin",
-                "Estimation temps": "0h",
+                "Estimation temps": "0 h",
                 "status": "Nouveau",
                 "acceptable": false
             },
@@ -18,7 +18,7 @@
                 "type": "défaut",
                 "description": "pouvez pas afficher l'image du produit en grand",
                 "responsable": "Robin",
-                "Estimation temps": "0h",
+                "Estimation temps": "0 h",
                 "status": "Nouveau",
                 "acceptable": false
             },
@@ -28,7 +28,7 @@
                 "type": "défaut",
                 "description": "filtre par marque ne fonctionne pas",
                 "responsable": "A réclamer",
-                "Estimation temps": "0h",
+                "Estimation temps": "0 h",
                 "status": "Nouveau",
                 "acceptable": false
             },
@@ -38,7 +38,7 @@
                 "type": "tâche",
                 "description": "ultilisateur modifie mot de passe",
                 "responsable": "A réclamer",
-                "Estimation temps": "0h",
+                "Estimation temps": "0 h",
                 "status": "Nouveau",
                 "acceptable": false
             },
@@ -48,7 +48,7 @@
                 "type": "tâche",
                 "description": "ultilisateur modifie photo profil",
                 "responsable": "A réclamer",
-                "Estimation temps": "0h",
+                "Estimation temps": "0 h",
                 "status": "Nouveau",
                 "acceptable": false
             },
@@ -58,7 +58,7 @@
                 "type": "tâche",
                 "description": "suppression groupée d'articles du panier",
                 "responsable": "A réclamer",
-                "Estimation temps": "100h",
+                "Estimation temps": "100 h",
                 "status": "Nouveau",
                 "acceptable": false
             },
@@ -68,7 +68,7 @@
                 "type": "demande",
                 "description": "suppression des articles non valables du panier",
                 "responsable": "A réclamer",
-                "Estimation temps": "0h",
+                "Estimation temps": "0 h",
                 "status": "Nouveau",
                 "acceptable": false
             },
@@ -78,7 +78,7 @@
                 "type": "demande",
                 "description": "Gestion du module d'adresse",
                 "responsable": "A réclamer",
-                "Estimation temps": "0h",
+                "Estimation temps": "0 h",
                 "status": "Nouveau",
                 "acceptable": false
             },
@@ -88,7 +88,7 @@
                 "type": "demande",
                 "description": "Module de connexion de l'utilisateur",
                 "responsable": "A réclamer",
-                "Estimation temps": "0h",
+                "Estimation temps": "0 h",
                 "status": "Nouveau",
                 "acceptable": false
             }

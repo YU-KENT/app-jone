@@ -15,7 +15,7 @@
                     "type": "défaut",
                     "description": "panier n'affiche pas entièrement en mobile",
                     "responsable": "A réclamer",
-                    "Estimation temps": "0h",
+                    "Estimation temps": "0 h",
                     "status": "Nouveau",
                     "acceptable": true
                 },
@@ -25,7 +25,7 @@
                     "type": "défaut",
                     "description": "code promo ne fonctionne pas",
                     "responsable": "A réclamer",
-                    "Estimation temps": "0h",
+                    "Estimation temps": "0 h",
                     "status": "Nouveau",
                     "acceptable": true
                 }
@@ -37,7 +37,7 @@
                     "type": "défaut",
                     "description": "pouvez pas afficher l'image du produit en grand",
                     "responsable": "A réclamer",
-                    "Estimation temps": "0h",
+                    "Estimation temps": "0 h",
                     "status": "Nouveau",
                     "acceptable": false
                 }

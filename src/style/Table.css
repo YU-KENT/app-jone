@@ -45,6 +45,7 @@
 /* Style for each row */
 .table-row {
     display: flex;
+    align-items: center;
     box-sizing: border-box;
     padding: 8px 0;
     height: 36px;
@@ -143,7 +144,6 @@
     justify-content: center;
     align-items: center;
     padding: 7px;
-
     background-color: #333;
     border-radius: 1px;
     color: #ffff;
